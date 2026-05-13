@@ -227,6 +227,7 @@ p {
   color: var(--c-green-deep);
   border-color: var(--c-gold-light);
   font-weight: 600;
+  margin-bottom: 10px;
 }
 .btn-gold:hover {
   background: var(--c-gold);
@@ -1612,6 +1613,9 @@ img.logo {
   justify-content: space-between;
   font-size: 0.81rem;
   color: rgba(255, 255, 255, 0.3);
+}
+.footer-bottom p {
+  color: rgba(255, 255, 255, 0.45);
 }
 .footer-bottom a {
   color: rgba(255, 255, 255, 0.45);
