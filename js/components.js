@@ -20,7 +20,7 @@ function renderHeader() {
   el.innerHTML = `
     <nav class="nav-wrap">
       <a href="${B}/index.html" class="nav-logo" aria-label="SapatEngineering Home">
-      <img src="${B}/icon.png" class="logo">
+      <img src="${B}/icon.webp" class="logo" alt="Sapat Engineering logo" width="50" height="50" loading="lazy" onerror="this.style.display='none'">
       <div class="logo-name-tag">
         <span class="logo-name">Sapat Engineering</span>
         <span class="logo-tag">HVAC &amp; Ventilation · Dubai</span>
