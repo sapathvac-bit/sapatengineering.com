@@ -24,6 +24,23 @@ function initGTM() {
 // Вызвать сразу
 initGTM();
 
+function initGoogleAds() {
+  const script = document.createElement("script");
+  script.async = true;
+  script.src = "https://www.googletagmanager.com/gtag/js?id=GT-K8K36CX5";
+  document.head.appendChild(script);
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  window.gtag = gtag;
+  gtag("js", new Date());
+  gtag("config", "GT-K8K36CX5");
+}
+
+initGoogleAds();
+
 function getBase() {
   const depth = (window.location.pathname.match(/\//g) || []).length - 1;
   return depth <= 0 ? "." : Array(depth).fill("..").join("/");
