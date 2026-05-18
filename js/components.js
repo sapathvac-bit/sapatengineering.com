@@ -69,7 +69,7 @@ function renderHeader() {
         <li><a href="${B}/index.html#contact">Contact</a></li>
       </ul>
 
-      <a href="${B}/index.html#contact" class="btn btn-green nav-cta">Get a Quote</a>
+      <a href="${B}/index.html#contact" class="head_quote btn btn-green nav-cta">Get a Quote</a>
 
       <button class="nav-burger" id="nav-burger" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -217,7 +217,7 @@ function renderPopup() {
       </div>
       <div class="popup-body">
         <form id="popup-form" novalidate>
-          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
+          <input type="hidden" name="access_key" value="4595f4f1-ca9c-4439-9916-0c2852f9fe3f">
           <input type="hidden" name="subject" value="Consultation Request — SapatEngineering">
           <input type="hidden" name="from_name" value="SapatEngineering Website">
 
@@ -264,7 +264,7 @@ function renderPopup() {
             <label for="p-msg">Comments</label>
             <textarea id="p-msg" name="message" placeholder="Project details, property size, requirements…"></textarea>
           </div>
-          <button type="submit" class="btn btn-green" style="width:100%;justify-content:center;padding:1rem;">Submit Request</button>
+          <button type="submit" class="popup-form-submit btn btn-green" style="width:100%;justify-content:center;padding:1rem;">Submit Request</button>
         </form>
         <div id="popup-success" class="form-success">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
