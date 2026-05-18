@@ -19,16 +19,12 @@ function initGTM() {
   noscript.innerHTML = `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K2QDHD9Q"
     height="0" width="0" style="display:none;visibility:hidden"></iframe>`;
   document.body.insertBefore(noscript, document.body.firstChild);
-}
 
-// Вызвать сразу
-initGTM();
-
-function initGoogleAds() {
-  const script = document.createElement("script");
-  script.async = true;
-  script.src = "https://www.googletagmanager.com/gtag/js?id=GT-K8K36CX5";
-  document.head.appendChild(script);
+  // Google Ads Tag — AW-18171748614
+  const adsScript = document.createElement("script");
+  adsScript.async = true;
+  adsScript.src = "https://www.googletagmanager.com/gtag/js?id=AW-18171748614";
+  document.head.appendChild(adsScript);
 
   window.dataLayer = window.dataLayer || [];
   function gtag() {
@@ -36,10 +32,11 @@ function initGoogleAds() {
   }
   window.gtag = gtag;
   gtag("js", new Date());
-  gtag("config", "GT-K8K36CX5");
+  gtag("config", "AW-18171748614");
 }
 
-initGoogleAds();
+// Вызвать сразу
+initGTM();
 
 function getBase() {
   const depth = (window.location.pathname.match(/\//g) || []).length - 1;
