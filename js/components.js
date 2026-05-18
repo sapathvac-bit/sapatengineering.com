@@ -3,6 +3,27 @@
    components.js: Header, Footer, Popup, Floats
    ======================================== */
 
+/* ---- Google Tag Manager ---- */
+function initGTM() {
+  // Фрагмент 1 — в head
+  const script = document.createElement("script");
+  script.innerHTML = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K2QDHD9Q');`;
+  document.head.appendChild(script);
+
+  // Фрагмент 2 — noscript после body
+  const noscript = document.createElement("noscript");
+  noscript.innerHTML = `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K2QDHD9Q"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe>`;
+  document.body.insertBefore(noscript, document.body.firstChild);
+}
+
+// Вызвать сразу
+initGTM();
+
 function getBase() {
   const depth = (window.location.pathname.match(/\//g) || []).length - 1;
   return depth <= 0 ? "." : Array(depth).fill("..").join("/");
