@@ -83,7 +83,8 @@ function renderHeader() {
         <li><a href="${B}/index.html#contact">Contact</a></li>
       </ul>
 
-      <a href="${B}/index.html#contact" class="head_quote btn btn-green nav-cta">Get a Quote</a>
+      <!--a href="${B}/index.html#contact" class="head_quote btn btn-green nav-cta">Get a Quote</a-->
+      <button class="head_quote btn btn-green nav-cta" data-popup aria-label="Request free consultation">Get a Quote</button>
 
       <button class="nav-burger" id="nav-burger" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
