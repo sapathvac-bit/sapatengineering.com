@@ -7,23 +7,23 @@
    CENTRAL CONFIG — меняйте только здесь
    ================================================ */
 const SITE = {
-  phone:      '+971 50 135 7591',
-  phoneTel:   'tel:+971501357591',
-  whatsapp:   'https://wa.me/971507722629',
-  email:      'sapat.hvac@gmail.com',
-  emailLink:  'mailto:sapat.hvac@gmail.com',
-  address:    'Dubai, United Arab Emirates',
-  hours:      'Mon–Sat: 8:00 AM – 6:00 PM',
-  name:       'Sapat Engineering',
-  tagline:    'HVAC &amp; Ventilation · Dubai',
-  web3key:    '4595f4f1-ca9c-4439-9916-0c2852f9fe3f',
-  gtmId:      'GTM-K2QDHD9Q',
-  gadsId:     'AW-18171748614',
+  phone: "+971 50 135 7591",
+  phoneTel: "tel:+971501357591",
+  whatsapp: "https://wa.me/971501357591",
+  email: "sapat.hvac@gmail.com",
+  emailLink: "mailto:sapat.hvac@gmail.com",
+  address: "Dubai, United Arab Emirates",
+  hours: "Mon–Sat: 8:00 AM – 6:00 PM",
+  name: "Sapat Engineering",
+  tagline: "HVAC &amp; Ventilation · Dubai",
+  web3key: "4595f4f1-ca9c-4439-9916-0c2852f9fe3f",
+  gtmId: "GTM-K2QDHD9Q",
+  gadsId: "AW-18171748614",
 };
 
 /* ---- Google Tag Manager + Google Ads ---- */
 function initGTM() {
-  const script = document.createElement('script');
+  const script = document.createElement("script");
   script.innerHTML = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -31,21 +31,23 @@ function initGTM() {
     })(window,document,'script','dataLayer','${SITE.gtmId}');`;
   document.head.appendChild(script);
 
-  const noscript = document.createElement('noscript');
+  const noscript = document.createElement("noscript");
   noscript.innerHTML = `<iframe src="https://www.googletagmanager.com/ns.html?id=${SITE.gtmId}"
     height="0" width="0" style="display:none;visibility:hidden"></iframe>`;
   document.body.insertBefore(noscript, document.body.firstChild);
 
-  const adsScript = document.createElement('script');
+  const adsScript = document.createElement("script");
   adsScript.async = true;
   adsScript.src = `https://www.googletagmanager.com/gtag/js?id=${SITE.gadsId}`;
   document.head.appendChild(adsScript);
 
   window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
+  function gtag() {
+    dataLayer.push(arguments);
+  }
   window.gtag = gtag;
-  gtag('js', new Date());
-  gtag('config', SITE.gadsId);
+  gtag("js", new Date());
+  gtag("config", SITE.gadsId);
 }
 
 initGTM();
@@ -53,17 +55,17 @@ initGTM();
 /* ---- Base path helper ---- */
 function getBase() {
   const depth = (window.location.pathname.match(/\//g) || []).length - 1;
-  return depth <= 0 ? '.' : Array(depth).fill('..').join('/');
+  return depth <= 0 ? "." : Array(depth).fill("..").join("/");
 }
 
 /* ================================================
    HEADER
    ================================================ */
 function renderHeader() {
-  const el = document.getElementById('site-header');
+  const el = document.getElementById("site-header");
   if (!el) return;
   const B = getBase();
-  el.classList.add('transparent');
+  el.classList.add("transparent");
 
   el.innerHTML = `
     <nav class="nav-wrap">
@@ -130,7 +132,7 @@ function renderHeader() {
    FOOTER
    ================================================ */
 function renderFooter() {
-  const el = document.getElementById('site-footer');
+  const el = document.getElementById("site-footer");
   if (!el) return;
   const B = getBase();
 
@@ -214,7 +216,7 @@ function renderFooter() {
    FLOATING BUTTONS
    ================================================ */
 function renderFloats() {
-  const el = document.getElementById('float-btns');
+  const el = document.getElementById("float-btns");
   if (!el) return;
 
   el.innerHTML = `
@@ -237,7 +239,7 @@ function renderFloats() {
    POPUP FORM
    ================================================ */
 function renderPopup() {
-  const el = document.getElementById('popup-overlay');
+  const el = document.getElementById("popup-overlay");
   if (!el) return;
 
   el.innerHTML = `
@@ -312,7 +314,7 @@ function renderPopup() {
 }
 
 /* ---- INIT ---- */
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   renderHeader();
   renderFooter();
   renderFloats();
