@@ -460,12 +460,14 @@ img.logo {
 }
 .mob-nav {
   position: fixed;
-  top: 78px;
+  top: 68px;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 999;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
   padding: 1.5rem 2rem 3rem;
   flex-direction: column;
   gap: 0.2rem;
